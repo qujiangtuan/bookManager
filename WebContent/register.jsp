@@ -28,7 +28,7 @@ body{background:url(images/2.png)}
 			var name=$("#name").val();//获取提交的值
 			if(name.length==0){//进行判断，如果获取的值为0那么提示账号不能为空
 				//alert("aa");//测试使用
-				$("#nameError").html("账号不能为空");
+				$("#nameError").html("아이디를 입력해주세요!");
 				return false;
 			}
 			//密码进行验证不能为空
@@ -89,13 +89,13 @@ body{background:url(images/2.png)}
 			<td>이메일：</td>
 			<td><input type="text" name="email" id="email"></td>
 		</tr>
-		<tr>
-			<td>역할：</td>
-			<td>
-				<input type="radio" name="isAdmin" value="1" id="isAdmin">관리자
-				<input type="radio" name="isAdmin" value="0" id="isAdmin">학생
-			</td>
-		</tr>
+<!-- 		<tr> -->
+<!-- 			<td>역할：</td> -->
+<!-- 			<td> -->
+<!-- 				<input type="radio" name="isAdmin" value="1" id="isAdmin">관리자 -->
+<!-- 				<input type="radio" name="isAdmin" value="0" id="isAdmin">학생 -->
+<!-- 			</td> -->
+<!-- 		</tr> -->
 		<tr>
 			<td colspan="1">
 			</td>

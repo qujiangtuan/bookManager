@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>head</title>
+<title>head2</title>
 <style type="text/css">
 #head{background-color:#eee;height:60px;}
 a{font-size: 36px;}
@@ -24,7 +24,6 @@ a{font-size: 36px;}
 	<tr>
 		<td>사용자 : <%=user.getName() %>,환영합니다!</td>
 		<td align="right">
-			<!-- <a href="cart.jsp">나의 장바구니</a> -->
 			<a href="logout.jsp">로그아웃</a>
 		</td>
 	</tr>

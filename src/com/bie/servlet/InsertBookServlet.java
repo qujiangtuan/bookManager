@@ -39,7 +39,7 @@ public class InsertBookServlet extends HttpServlet {
 //	    getServletContext().getRealPath("/");
 		
 		
-		String bookname=null,price=null,author=null,publish=null;
+		String bookname=null,type=null,price=null,author=null,publish=null;
 		Map<String ,String> map=null;
 		String fileName=null;
 
@@ -87,6 +87,7 @@ public class InsertBookServlet extends HttpServlet {
 			System.out.println(map);
 			for(Map.Entry<String,String> enty:map.entrySet()) {
 				if("bookname".equals(enty.getKey())) {bookname=enty.getValue();}
+				else if("select".equals(enty.getKey())) {type=enty.getValue();}
 				else if("price".equals(enty.getKey())) {price=enty.getValue();}
 				else if("author".equals(enty.getKey())) {author=enty.getValue();}
 				else if("publish".equals(enty.getKey())) {publish=enty.getValue();}
@@ -104,6 +105,7 @@ public class InsertBookServlet extends HttpServlet {
 		Book book=new Book();
 		//将页面获取的值设置到set方法中
 		book.setBookname(bookname);
+		book.setBookTp1(type);
 		book.setAuthor(author);
 		int price2=Integer.parseInt(price);
 		book.setPrice(price2);

@@ -11,7 +11,7 @@ body{font-size:12px;font-family:"微软雅黑";}
 .no_1{
     width:100%;
     height:50px;
-/*    background:#d5d5d5;*/
+   background:#fff;
     border:3px solid #d5d5d5;
       clear: both;
 }
@@ -23,19 +23,20 @@ body{font-size:12px;font-family:"微软雅黑";}
     position:relative;
 }
 .logo{
-    width:100px;
-    height:50px;
+    width:150px;
+    height:80px;
     position:absolute;
-    top:5px;
+    top:0px;
     left:20px;
+    
 }
 .user-picture img{
 	width:45px;
     height:40px;
 }
 .logo img{
-    width:80px;
-    height:40px;
+    width:100px;
+    height:50px;
 }
 
 .title{
@@ -50,17 +51,33 @@ body{font-size:12px;font-family:"微软雅黑";}
 /*    background: red;*/
     position:absolute;
     top:0px;
-    right:620px;
+    right:700px;
 }
+select::-ms-expand { display: none; }
 .select{
     width:80px;
     height:30px;
     position: absolute;
     top:10px;
     right:255px;
-    background: #FF8EFF;
+  	border: solid 1px #FF8EFF;
+	border-radius:3px;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+  background: url("https://raw.githubusercontent.com/ourjs/static/gh-pages/2015/arrow.png") no-repeat scroll right center transparent;
+
+
+  padding-right: 14px;
+}
+.select option{
+	margin-top:20px;
 }
 .search-picture{
+	border:0px;
+	border-radius:5px;
+	background:url(../img/search2.PNG);
     margin-top:10px;
     width:30px;
     height:30px;
@@ -76,19 +93,20 @@ body{font-size:12px;font-family:"微软雅黑";}
     position: absolute;
     top:9px;
     right:40px;
-    border:2px solid #D200D2;
+    border:1px solid #D200D2;
+    border-radius:3px;
 }
 .search img{
     width:30px;
     height:30px;
 }
 .cou_center{
-	width:300px;
+	width:350px;
     height:50px;
 /* 	background: purple; */
     position:absolute;
     top:0px;
-    right:280px;
+    right:320px;
 }
 .cou_center li{
 /* 	background:#BE77FF; */
@@ -100,6 +118,16 @@ body{font-size:12px;font-family:"微软雅黑";}
     padding:5px 8px;
 /*     display:block; */
 /*     border-radius:10px; */
+}
+.note_bo{
+	background-color:green;
+	width:70px;
+	height:30px;
+	margin-top:-5px;
+	margin-right:10px;
+	text-align:center;
+	line-height:30px;
+	border-radius:5px;
 }
 .nav-title{
     width:360px;
@@ -122,20 +150,24 @@ body{font-size:12px;font-family:"微软雅黑";}
 }
 
 .login{
-    width:130px;
+    width:250px;
     height:50px;
-   /* background: blue;*/
+/*    background: blue; */
     position:absolute;
     top:0px;
     right:100px;
 }
 .login ul li{
-    /*background: gray;*/
+/*     background: gray; */
     float:right;
-    margin:15px 5px;
+    margin:15px 8px;
     font-size:15px;
     display: block;
     
+}
+.long{
+	width:140px;
+	text-align:right;
 }
 .login ul li a{
 	color:#00BB00;

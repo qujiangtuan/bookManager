@@ -18,10 +18,10 @@ h1{text-align:center;margin-bottom:50px;}
 h4{text-align:left;color:red;}
 body{background:url(img/login_background.png);}
 a{text-decoration:none;font-size:20px;color:black;}
-a:hover{text-decoration:underline;font-size:24px;color:red;}	
+a:hover{text-decoration:underline;color:red;}	
 .form{margin-top:150px;}
-.l,.c{background:green;border-radius:5px;}
-
+.l{background:#A6FFA6;border-radius:5px;width:200px;height:30px;border-color:#A6FFA6;}
+#name,#password{width:200px;height:30px;border:solid 2px green;border-radius:5px;}
 </style>
 
 </head>
@@ -38,8 +38,8 @@ a:hover{text-decoration:underline;font-size:24px;color:red;}
 		</tr>
 		<tr>
 			<td>비밀번호：</td>
-			<td><input type="password" name="password" id="password"></td>
-			<td><a href="searchPassword.jsp">비밀번호 찾기</a></td>
+			<td><input type="password" name="password" id="password"><a href="searchPassword.jsp">비밀번호 찾기</a></td>
+<!-- 			<td><a href="searchPassword.jsp">비밀번호 찾기</a></td> -->
 		</tr>
 		<!-- <tr>
 			<td>权限：</td>
@@ -56,7 +56,7 @@ a:hover{text-decoration:underline;font-size:24px;color:red;}
 			</td>
 			<td>
 				<input class="l" type="submit" value="로그인"/>
-				<input class="c" type="reset" value="취소"/>
+<!-- 				<input class="c" type="reset" value="취소"/> -->
 				<a href="register.jsp" target="_blank">회원가입</a>
 			</td>
 		</tr>

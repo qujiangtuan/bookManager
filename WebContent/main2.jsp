@@ -2,9 +2,11 @@
 <%@page import="com.bie.dao.BookDao"%>
 <%@page import="com.bie.model.Book"%>
 <%@page import="java.util.List"%>
+<%@page import="com.bie.model.User"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+
 <%
 	String path = request.getContextPath();
     String basePath = request.getScheme() + "://"
@@ -20,17 +22,25 @@
 	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lunbostyle.css">
 	<style type="text/css">
-		
+		.no_1{height:50px;}
+		.nav{height:50px;}
 	</style>
 	</head>
 <body>
+<%
+	User user=(User)session.getAttribute("user");
+	if(user==null){
+		response.sendRedirect("login.jsp");
+	}else{
+%>
                 <!-- 导航条-->
     <div class="no_1">
         <div class="nav">
-            <div class="logo"><a href=""><img src="img/Books-Store-Logo2.jpg" alt=""></a></div>
+            <div class="logo"><a href="main2.jsp"><img src="img/Books-Store-Logo2.jpg" alt=""></a></div>
             <div class="title">
                 <div class="search">
                     <select class="select">
+                    	<option value ="volvo">전체 </option>
                           <option value ="volvo">과학 </option>
                           <option value ="saab">예술</option>
                           <option value="opel">언어</option>
@@ -39,11 +49,14 @@
                     <input type="text" class="search-text">
                     <div class="search-picture"><a href="#"><img src="img/search2.PNG" alt=""></a></div>
                     <!-- <div class="search-text"></div> -->
+                    
                 </div>
                 <div class="cou_center">
                 	<ul>
                 		<li>010-4042-1777</li>
                         <li>고객센터:</a></li>
+<!--                         <li ><a href="noteBorder.jsp"><div class="note_bo">게시판</div></a></li> -->
+                        <li ><a href="noteboard.jsp"><div class="note_bo">게시판</div></a></li>
                     </ul>
                 </div>
 <!--                 <div class="nav-title"> -->
@@ -55,11 +68,13 @@
 <!--                 </div> -->
                 <div class="login">
                     <ul>
-                        <li ><a href="login.jsp">로그인</a></li>
-                        <li ><a href="register.jsp">회원가입</a></li>
+                        <li ><a href="logout.jsp">로그아웃</a></li>
+<!--                         <li ><a href="register.jsp">회원가입</a></li> -->
+						<li class="long"><%=user.getName() %></li>
+							<%}%>
                     </ul>
                 </div>
-                <div class="user-picture"><a href=""><img src="img/user.PNG" alt=""></a>
+                <div class="user-picture"><a href="#"><img src="img/user.PNG" alt=""></a>
                     <div class="user-pList">
                         <p class="plist"><a href="#">개인정보</a></p>
                         <p class="plist"><a href="#">장바구니</a></p>
@@ -240,13 +255,12 @@
 	%>
 	<!-- ABOUT2区 -->
 			<div class="about2">
-				<table class="table" cellspacing="10">
+				<table class="table" >
 				<% for(int i=1;i<sum;i++){ %>
 					<%if(i%4==1){ %>
 						<tr>
 					<%} %>
 							<td class="background1">
-<%-- 								<img src="${list.get(i).getPic()}"> --%>
 								<img src="<%=list.get(i).getPic()%>">
 								<div class="c1  <%=i %>"  id="shoucang" onclick="changPic(<%=sum%>,<%=i%>)"></div>
 								<div class="book_title"><h3><%=list.get(i).getBookname() %></h3></div>
@@ -254,7 +268,10 @@
 					<%if(i%4==0){ %>
 						</tr>
 					<%} %>
-				<%} %>
+					
+				<%}%>
+			
+				
 		</table>
 			</div>
 	<div class="footer">

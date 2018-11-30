@@ -51,4 +51,6 @@ public interface BookDao {
 	 * @return
 	 */
 	public boolean deleteBook(Integer id);
+	
+	public List<Book> getBookList(Book book);
 }

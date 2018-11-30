@@ -15,6 +15,21 @@ public class Book implements Serializable{
 	private String author;
 	private String pic;
 	private String publish;
+	private String bookTp1;
+	private String bookTp2;
+	
+	public String getBookTp1() {
+		return bookTp1;
+	}
+	public void setBookTp1(String bookTp1) {
+		this.bookTp1 = bookTp1;
+	}
+	public String getBookTp2() {
+		return bookTp2;
+	}
+	public void setBookTp2(String bookTp2) {
+		this.bookTp2 = bookTp2;
+	}
 	public Integer getBookid() {
 		return bookid;
 	}

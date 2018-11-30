@@ -16,7 +16,7 @@
 	String bookname=request.getParameter("bookname");	
 	String price=request.getParameter("price");	
 	String author=request.getParameter("author");	
-	String pic=request.getParameter("pic");	
+// 	String pic=request.getParameter("pic");	
 	String publish=request.getParameter("publish");	
 	String bookid=request.getParameter("bookid");
 	
@@ -25,7 +25,7 @@
 	book.setAuthor(author);
 	int price2=Integer.parseInt(price);
 	book.setPrice(price2);
-	book.setPic(pic);
+// 	book.setPic(pic);
 	book.setPublish(publish);
 	Integer id=Integer.parseInt(bookid);
 	book.setBookid(id);

@@ -17,8 +17,8 @@
 	String password=request.getParameter("password");
 	String email=request.getParameter("email");
 	String phone=request.getParameter("phone");
-	String isAdmin=request.getParameter("isAdmin");
-	
+// 	String isAdmin=request.getParameter("isAdmin");
+	String isAdmin="0";
 	
 	//获取register.jsp页面提交的账号和密码设置到实体类User中
 	user.setName(name);
@@ -32,9 +32,11 @@
 	boolean flag=dao.register(user);
 	
 	if(flag){
-		response.sendRedirect("login.jsp");
+		out.print("<script>alert('회원가입 성공!');window.location='login.jsp'</script>");
+// 		response.sendRedirect("login.jsp");
 	}else{
-		response.sendRedirect("register.jsp");
+		out.print("<script>alert('회원가입 실패!');window.location='register.jsp'</script>");
+// 		response.sendRedirect("register.jsp");
 	}
 %>
 </body>

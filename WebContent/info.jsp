@@ -53,10 +53,12 @@ a:hover{text-decoration:underline;font-size:18px;}
 		if(user.getIsAdmin().equals("1")){
 			//out.println(us.getIsAdmin());
 			response.sendRedirect("admin.jsp");
+			
 		}else if(user.getIsAdmin().equals("0")){
 			
 			//如果是普通会员，跳转到图书列表的页面
-			response.sendRedirect("book.jsp");
+// 			response.sendRedirect("book.jsp");
+			response.sendRedirect("main2.jsp");
 		}
 		
 	}else{

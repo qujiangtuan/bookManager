@@ -10,6 +10,7 @@ import java.util.List;
 import com.bie.dao.BookDao;
 import com.bie.model.Book;
 import com.bie.utils.BaseDao;
+import com.bie.utils.StringUtil;
 
 public class BookDaoImpl implements BookDao{
 
@@ -32,6 +33,7 @@ public class BookDaoImpl implements BookDao{
 			while(rs.next()){
 				Book book=new Book();
 				book.setBookid(rs.getInt("bookid"));
+				book.setBookTp1(rs.getString("type"));
 				book.setBookname(rs.getString("bookname"));
 				book.setPrice(rs.getInt("price"));
 				book.setAuthor(rs.getString("author"));
@@ -72,6 +74,7 @@ public class BookDaoImpl implements BookDao{
 				Book books=new Book();
 				books.setBookid(rs.getInt("bookid"));
 				books.setBookname(rs.getString("bookname"));
+				books.setBookTp1(rs.getString("type"));
 				books.setPrice(rs.getInt("price"));
 				books.setAuthor(rs.getString("author"));
 				books.setPic(rs.getString("pic"));
@@ -122,6 +125,7 @@ public class BookDaoImpl implements BookDao{
 				Book book=new Book();
 				book.setBookid(rs.getInt("bookid"));
 				book.setBookname(rs.getString("bookname"));
+				book.setBookTp1(rs.getString("type"));
 				book.setPrice(rs.getInt("price"));
 				book.setAuthor(rs.getString("author"));
 				book.setPic(rs.getString("pic"));
@@ -179,13 +183,14 @@ public class BookDaoImpl implements BookDao{
 
 	@Override
 	public boolean insertBook(Book book) {
-		String sql="insert into book values(book_SEQ.nextval,?,?,?,?,?)";
+		String sql="insert into book values(book_SEQ.nextval,?,?,?,?,?,?)";
 		List<Object> list=new ArrayList<Object>();
 		list.add(book.getBookname());
 		list.add(book.getPrice());
 		list.add(book.getAuthor());
 		list.add(book.getPic());
 		list.add(book.getPublish());
+		list.add(book.getBookTp1());
 		
 		boolean mark=BaseDao.addUpdateDelete(sql, list.toArray());
 		if(mark){
@@ -198,13 +203,13 @@ public class BookDaoImpl implements BookDao{
 
 	@Override
 	public boolean updateBook(Book book) {
-		String sql="update book SET bookname=?,price=?,author=?,pic=?,publish=? where bookid=? ";
+		String sql="update book SET bookname=?,type=?,price=?,author=?,publish=? where bookid=? ";
 		if(book!=null && book.getBookid()!=null){
 			List<Object> list=new ArrayList<Object>();
 			list.add(book.getBookname());
+			list.add(book.getBookTp1());
 			list.add(book.getPrice());
 			list.add(book.getAuthor());
-			list.add(book.getPic());
 			list.add(book.getPublish());
 			
 			list.add(book.getBookid());
@@ -229,6 +234,48 @@ public class BookDaoImpl implements BookDao{
 		}else{
 			return false;
 		}
+	}
+	
+	public List<Book> getBookList(Book book) {
+		Connection con = null;
+		List<Book> retList = new ArrayList<Book>();
+		StringBuffer sqlString=new StringBuffer("select * from book ");
+//		String sqlString = ("select * from book");
+		System.out.println(book.getBookname());
+		if(!StringUtil.isEmpty(book.getBookname())){
+            sqlString.append(" and bookname like '%"+book.getBookname()+"%'");
+		}
+		if(!StringUtil.isEmpty(book.getAuthor())){
+            sqlString.append(" and author like '%"+book.getAuthor()+"%'");
+		}
+		if(!StringUtil.isEmpty(book.getBookTp1())){
+            sqlString.append(" and type like '%"+book.getBookTp1()+"%'");
+		}
+		if(!StringUtil.isEmpty(book.getPublish())){
+            sqlString.append(" and publish like '%"+book.getPublish()+"%'");
+		}
+		try {
+			con = BaseDao.getCon();
+			 PreparedStatement prst=con.prepareStatement(sqlString.toString().replaceFirst("and", "where"));
+			ResultSet rs = prst.executeQuery();
+			while (rs.next()) {
+				Book b=new Book();
+				b.setBookid(rs.getInt("bookid"));
+				b.setBookname(rs.getString("bookname"));
+				b.setBookTp1(rs.getString("type"));
+				b.setPrice(rs.getInt("price"));
+				b.setAuthor(rs.getString("author"));
+				b.setPic(rs.getString("pic"));
+				b.setPublish(rs.getString("publish"));
+				retList.add(b);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return retList;
 	}
 
 	
