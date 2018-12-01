@@ -30,4 +30,7 @@ public interface UserDao {
 	 * @return
 	 */
 	public List<User> selectUser(String sql,Object[] arr);
+	
+	public boolean updateUser(User user);
+	public User login2(User admin);
 }

@@ -200,6 +200,28 @@ public class BookDaoImpl implements BookDao{
 		}
 		
 	}
+	
+	@Override
+	public boolean collectBook(Book book) {
+		String sql="insert into cbook values(?,?,?,?,?,?,?,?)";
+		List<Object> list=new ArrayList<Object>();
+		list.add(book.getBookid());
+		list.add(book.getBookname());
+		list.add(book.getPrice());
+		list.add(book.getAuthor());
+		list.add(book.getPic());
+		list.add(book.getPublish());
+		list.add(book.getBookTp1());
+		list.add(book.getUserId());
+		
+		boolean mark=BaseDao.addUpdateDelete(sql, list.toArray());
+		if(mark){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
 
 	@Override
 	public boolean updateBook(Book book) {
@@ -222,6 +244,7 @@ public class BookDaoImpl implements BookDao{
 		}
 		return false;
 	}
+	
 
 	@Override
 	public boolean deleteBook(Integer id) {
@@ -236,12 +259,31 @@ public class BookDaoImpl implements BookDao{
 		}
 	}
 	
+	@Override
+	public boolean deleteCollectBook(Integer id,Integer userid) {
+		System.out.println("id="+id+",userid="+userid);
+		String sql="delete from cbook where bookid="+id+" and userid="+userid;
+		Connection con = null;
+        try {
+        	con = BaseDao.getCon();
+                  PreparedStatement prst=con.prepareStatement(sql);
+//                  prst.setInt(1,id);
+//                  prst.setInt(2,userid);
+                  if(prst.executeUpdate()>0){
+                            return true;
+                  }
+        } catch (SQLException e) {    
+                  e.printStackTrace();
+        }catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+        return false;
+	}
+	
 	public List<Book> getBookList(Book book) {
 		Connection con = null;
 		List<Book> retList = new ArrayList<Book>();
 		StringBuffer sqlString=new StringBuffer("select * from book ");
-//		String sqlString = ("select * from book");
-		System.out.println(book.getBookname());
 		if(!StringUtil.isEmpty(book.getBookname())){
             sqlString.append(" and bookname like '%"+book.getBookname()+"%'");
 		}
@@ -277,6 +319,33 @@ public class BookDaoImpl implements BookDao{
 		}
 		return retList;
 	}
-
+	public List<Book> getCollectBookList(Book book) {
+		Connection con = null;
+		List<Book> retList = new ArrayList<Book>();
+		String sqlString="select * from cbook where userid='"+book.getUserId()+"'";
+		try {
+			con = BaseDao.getCon();
+			 PreparedStatement prst=con.prepareStatement(sqlString);
+			ResultSet rs = prst.executeQuery();
+			while (rs.next()) {
+				Book b=new Book();
+				b.setBookid(rs.getInt("bookid"));
+				b.setBookname(rs.getString("bookname"));
+				b.setBookTp1(rs.getString("type"));
+				b.setPrice(rs.getInt("price"));
+				b.setAuthor(rs.getString("author"));
+				b.setPic(rs.getString("pic"));
+				b.setPublish(rs.getString("publish"));
+				b.setUserId(rs.getInt("userid"));
+				retList.add(b);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return retList;
+	}
 	
 }

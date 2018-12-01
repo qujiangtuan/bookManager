@@ -10,7 +10,7 @@
 				+ request.getServerName() + ":" + request.getServerPort()
 				+ path + "/";
 %> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <base href="<%=basePath %>" />
@@ -28,7 +28,7 @@ a:hover{text-decoration:underline;font-size:18px;}
 <body>
 <h4>ㅎㅎ</h4>
 <hr/>
-<h1>도서 List</h1>
+<h1>로그인</h1>
 <%
 //引入数据交互层
 	User user=new User();
@@ -43,18 +43,18 @@ a:hover{text-decoration:underline;font-size:18px;}
 	user.setPassword(password);
 	user.setIsAdmin(isAdmin);
 	
-	User us=dao.login(user);
+	User us=dao.login2(user);
 	
 	
-	
-	session.setAttribute("user",user);
+// 	System.out.println("us="+us);
+	session.setAttribute("user",us);
 	if(us != null){
 		//如果是管理员跳转到管理员页面
-		if(user.getIsAdmin().equals("1")){
+		if(us.getIsAdmin().equals("1")){
 			//out.println(us.getIsAdmin());
 			response.sendRedirect("admin.jsp");
 			
-		}else if(user.getIsAdmin().equals("0")){
+		}else if(us.getIsAdmin().equals("0")){
 			
 			//如果是普通会员，跳转到图书列表的页面
 // 			response.sendRedirect("book.jsp");

@@ -53,4 +53,9 @@ public interface BookDao {
 	public boolean deleteBook(Integer id);
 	
 	public List<Book> getBookList(Book book);
+
+	public boolean collectBook(Book book);
+	public List<Book> getCollectBookList(Book book);
+
+	boolean deleteCollectBook(Integer id, Integer userid);
 }

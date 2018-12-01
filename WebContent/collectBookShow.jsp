@@ -19,13 +19,14 @@
 <link rel="stylesheet" type="text/css" href="<%=basePath %>js/dataTable/jquery.dataTables.min.css">
 <script type="text/javascript" src="<%=basePath %>js/dataTable/jquery.js"></script>
 <script type="text/javascript" src="<%=basePath %>js/dataTable/jquery.dataTables.min.js"></script>
-
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/lunbostyle.css">
 <style type="text/css">
 body{background-color:#BBFFBB;}
 .c{margin-right:40px;margin-left:40px;}
 h1{text-align:center;color:#9F35FF;}
-a{font-size:24px;text-decoration:none;color:black;}
-a:hover{text-decoration:underline;color:#006000;}
+table a{font-size:24px;text-decoration:none;color:black;}
+table a:hover{text-decoration:underline;color:#006000;}
 .table_div{width:1000px;height:800px;margin:0 auto;}
 table{ width:100%;}
 .table_title{height:6px;}
@@ -34,37 +35,66 @@ table{ width:100%;}
 tr td{text-align:center;background-color:#BBFFBB;}
 .but{width:100px;height:40px;line-height:40px;text-align:center;border-radius:5px;background-color:#FF44FF;margin-left:20px;}
 .button_div{position:absolute;top:200px;left:20px;width:200px;height:100px;}
-#head{height:60px; margin:0 auto;background-color:green;text-align:center;line-height:60px;}
+#head{height:60px; margin:0 auto;background-color:green;text-align:center;line-height:60px;clear:both;}
 #head2{height:60px; margin:0 auto;text-align:center;line-height:60px;color:red;font-size:20px;}
 h2{margin:0 auto;color:white;font-size:26px;}
 </style>
 
-<script type="text/javascript">
-	function clickIt(){
-		var p2=document.getElementById("t2").value;
-		location.href="admin.jsp?p="+p2;
-	}
-</script>
 </head>
 <body>
+<%
+	User user=(User)session.getAttribute("user");
+	if(user==null){
+		response.sendRedirect("login.jsp");
+	}else{
+%>
+	  <!-- 导航条-->
+    <div class="no_1">
+        <div class="nav">
+            <div class="logo"><a href=""><img src="img/Books-Store-Logo2.jpg" alt=""></a></div>
+            <div class="title">
+                <div class="cou_center">
+                	<ul>
+                		<li>010-4042-1777</li>
+                        <li>고객센터:</a></li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li ><a href="main.jsp">로그아웃</a></li>
+<!--                         <li ><a href="register.jsp">회원가입</a></li> -->
+						<li class="long"><%=user.getName() %></li>
+							<%}%>
+                    </ul>
+                </div>
+                <div class="user-picture"><a href="#"><img src="img/user.PNG" alt=""></a>
+                    <div class="user-pList">
+                        <p class="plist"><a href="perInfo.jsp">개인정보</a></p>
+                        <p class="plist"><a href="collectBookShow.jsp">관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;심</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 <div id="head">
-	<h2>관리자화면</h2>
+	<h2>도서 관심</h2>
 </div>
 <%
 	User user3=(User)session.getAttribute("user");
+	int userid=user3.getId();
+	System.out.println("useridSession="+userid);
 	if(user3==null){
 		response.sendRedirect("login.jsp");
 	}else{
 %>
 		<div  id="head2">
-			<marquee>관리자 : <%=user3.getName() %>,환영합니다!</marquee>
+			<marquee><%=user3.getName() %>,환영합니다!</marquee>
 		</div>
 <%} %>
 
-<div class="button_div">
-	<div class="but"><a href="insertbook.jsp" >도서추가</a></div><br/>
-	<div class="but"><a href="logout.jsp" >로그아웃</a></div>
-</div>
+<!-- <div class="button_div"> -->
+<!-- 	<div class="but"><a href="insertbook.jsp" >도서추가</a></div><br/> -->
+<!-- 	<div class="but"><a href="logout.jsp" >로그아웃</a></div> -->
+<!-- </div> -->
 <%
 //获取Tomcat的绝对路径
 	String realPath = request.getSession().
@@ -72,13 +102,15 @@ h2{margin:0 auto;color:white;font-size:26px;}
 //     System.out.println(realPath);
     
 	Book book=new Book();
+	book.setUserId(user3.getId());
+	
 	BookDao dao=new BookDaoImpl();
 // 	List<Book> list=dao.bookPage(p, r);
-    List<Book> list=dao.getBookList(new Book());
+    List<Book> list=dao.getCollectBookList(book);
 	request.setAttribute("list",list);
+	System.out.println("collectList====="+list);
 	
-	request.setAttribute("book", book);
-// 	System.out.println(list);
+// 	request.setAttribute("book", book);
 %>
 <div class="table_div">
 <table align="center" cellpadding="10" cellspacing="10" class="tablelist" id="example" border="1">
@@ -91,8 +123,7 @@ h2{margin:0 auto;color:white;font-size:26px;}
 		<th>작가</th>
 		<th>사진</th>
 		<th>출판사</th>
-		<th>수정</th>
-		<th>삭제</th>
+		<th>관심</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -106,14 +137,13 @@ h2{margin:0 auto;color:white;font-size:26px;}
 	</c:if>
 	<tr bgcolor="${bg }" class="pic_list"> 
 			<td>${b.bookid}</td>
-			<td><a href="doInfo2.jsp?bookid=${b.bookid}">${b.bookname }</a></td>
-			<td><a href="doInfo2.jsp?bookid=${b.bookid}">${b.bookTp1 }</td>
+			<td><a href="doInfo.jsp?bookid=${b.bookid}">${b.bookname }</a></td>
+			<td><a href="doInfo.jsp?bookid=${b.bookid}">${b.bookTp1 }</td>
 			<td>${b.price }</td>
 			<td>${b.author }</td>
 			<td><img src="${b.pic }"></td>
 			<td>${b.publish }</td>
-			<td><a href="doInfo3.jsp?bookid=${b.bookid }">도서수정</a></td>
-			<td><a href="doInfo4.jsp?bookid=${b.bookid }">도서삭제</a></td>
+			<td><a href="doInfoCollectDelete.jsp?bookid=${b.bookid }&userid=<%=userid%>">취소</a></td>
 <%-- 			out.println("<%=realPath%>${b.pic }"); --%>
 	</tr>
 	</c:forEach>

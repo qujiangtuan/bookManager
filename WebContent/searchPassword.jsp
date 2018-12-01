@@ -20,7 +20,7 @@ body{background:url(images/3.jpg)}
 <body>
 <h1>비밀번호 찾기</h1>
 <hr/>
-<a href="javascript: window.history.go(-1)">앞 화면</a>
+<!-- <a href="javascript: window.history.go(-1)">앞 화면</a> -->
 <form action="dosearchPassword.jsp" method="post">
 	<table>
 		<tr>

@@ -23,6 +23,7 @@
    .container{clear:both;}
    .no_1{height:60px;}
    .nav{height:60px;}
+   .user-pList{width:100px;height:110px;}
 </style>
 <title>Insert title here</title>
 </head>
@@ -54,8 +55,8 @@
                 </div>
                 <div class="user-picture"><a href="#"><img src="img/user.PNG" alt=""></a>
                     <div class="user-pList">
-                        <p class="plist"><a href="#">개인정보</a></p>
-                        <p class="plist"><a href="#">장바구니</a></p>
+                         <p class="plist"><a href="perInfo.jsp">개인정보</a></p>
+                        <p class="plist"><a href="collectBookShow.jsp">관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;심</a></p>
                     </div>
                 </div>
             </div>

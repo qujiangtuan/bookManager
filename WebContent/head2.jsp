@@ -5,10 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>head2</title>
+<title>관리자 화면</title>
 <style type="text/css">
-#head{background-color:#eee;height:60px;}
+#head{height:60px; margin:0 auto;background-color:green;text-align:center;line-height:60px;}
 a{font-size: 36px;}
+h3{margin:0 auto;color:red;font-size:24px;}
 </style>
 </head>
 <body>
@@ -20,14 +21,7 @@ a{font-size: 36px;}
 %>
 
 <div id="head">
-<table width=100%>
-	<tr>
-		<td>사용자 : <%=user.getName() %>,환영합니다!</td>
-		<td align="right">
-			<a href="logout.jsp">로그아웃</a>
-		</td>
-	</tr>
-</table>
+		<marquee><%=user.getName() %>,환영합니다!</marquee>
 <%} %>
 </div>
 </body>

@@ -17,7 +17,15 @@ public class Book implements Serializable{
 	private String publish;
 	private String bookTp1;
 	private String bookTp2;
+	private int userId;
 	
+	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public String getBookTp1() {
 		return bookTp1;
 	}
@@ -70,8 +78,9 @@ public class Book implements Serializable{
 	@Override
 	public String toString() {
 		return "Book [bookid=" + bookid + ", bookname=" + bookname + ", price=" + price + ", author=" + author
-				+ ", pic=" + pic + ", publish=" + publish + "]";
+				+ ", pic=" + pic + ", publish=" + publish + ", bookTp1=" + bookTp1 + ", bookTp2=" + bookTp2 + "]";
 	}
+
 	 
 	 
 }

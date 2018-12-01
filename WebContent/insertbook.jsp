@@ -19,23 +19,54 @@
 <style type="text/css">
 	body{background-color:#BBFFBB;}
 	.select{
-		width:160px;
+		width:200px;
+		height:40px;
+		border-radius:5px;
+		border:solid 2px #9AFF02;
 	}
+	.table_div{
+		width:700px;
+/* 	background-color:red; */
+		margin:0 auto;
+		
+	}
+	.table{
+		width:100%;
+/* 		background-color:blue; */
+	}
+/* 	td{background-color:#ccc;} */
+	.l{
+		text-align:center;
+		font-size:24px;
+		color:#921AFF;
+	}
+	tr{height:45px;}
+	input{
+		width:200px;
+		height:40px;
+		border-radius:5px;
+		border:solid 2px #9AFF02;
+	}
+	#pic{
+		width:293px;
+	}
+	.btn{background-color:#FF44FF;font-size:20px;color:white;}
 </style>
 <title>도서 추가화면</title>
 </head>
 <body>
 <marquee><h1>도서 추가화면</h1></marquee>
 <!-- <form action="InsertBookServlet" method="post" enctype="multipart/form-data"> -->
+<div class="table_div">
 <form action="InsertBookServlet" method="post"  enctype="multipart/form-data" >
-	<table align="center" cellpadding="10" cellspacing="10" width="600px">
-		<tr bgcolor="pink" align="center">
-			<td>도서명</td>
-			<td><input type="text" name="bookname"/></td>
+	<table cellpadding="5" cellspacing="5" width="600px" class="table">
+		<tr>
+			<td class="l">도서명:</td>
+			<td  class="r"><input type="text" name="bookname"/></td>
 		</tr>
-		<tr bgcolor="green" align="center">
-			<td>종류</td>
-			<td>
+		<tr>
+			<td class="l">종류:</td>
+			<td class="r">
 				<select class="select" name="select">
 						<option value="건축학">건축학</option>
 						<option value="기계학">기계학</option>
@@ -64,30 +95,43 @@
 				</select>
 				</td>
 		</tr>
-		<tr bgcolor="green" align="center">
-			<td>가격</td>
-			<td><input type="text" name="price"/></td>
+		<tr >
+			<td class="l">가격:</td>
+			<td class="r"><input type="text" name="price"/></td>
 		</tr>
-		<tr bgcolor="yellow" align="center">
-			<td>작가</td>
-			<td><input type="text" name="author"/></td>
+		<tr >
+			<td class="l">작가:</td>
+			<td class="r"><input type="text" name="author"/></td>
 		</tr>
-		<tr bgcolor="green" align="center">
-			<td>사진</td>
-			<td><input type="file" name="pic"/></td>
+		<tr >
+			<td class="l" >사진:</td>
+			<td class="r"><input type="file" name="pic"/ id="pic"></td>
 		</tr>
-		<tr bgcolor="blue" align="center">
-			<td>출판사</td>
-			<td><input type="text" name="publish"/></td>
+		<tr >
+			<td class="l">출판사:</td>
+			<td class="r"><input type="text" name="publish"/></td>
 		</tr>
-		<tr bgcolor="#00BB00" align="center"> 
-			<td colspan="2" >
-				<input type="submit" value="추가">
-				<input type="reset" value="취소">
-				<a href="admin.jsp">도서 목록</a>
+		<tr > 
+			<td class="l" ></td>
+			<td >
+				<input class="btn" type="submit" value="추가">
+			</td>
+		</tr>
+<!-- 		<tr >  -->
+<!-- 			<td class="l"></td> -->
+<!-- 			<td > -->
+<!-- 				<input type="reset" value="취소"> -->
+<!-- 			</td> -->
+<!-- 		</tr> -->
+		<tr > 
+		     <td class="l"></td>
+			<td >
+				<input class="btn" type="button" value="도서목록"
+							onclick="window.location.href='admin.jsp'" />
 			</td>
 		</tr>
 	</table>	
 </form>
+</div>
 </body>
 </html>

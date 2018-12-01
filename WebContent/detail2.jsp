@@ -21,8 +21,19 @@
 
 <style type="text/css">
 h1{text-align:center;}
-a{font-size:24px;text-decoration:none;}
-a:hover{text-decoration:underline;font-size:28px;}
+/* a{font-size:24px;text-decoration:none;} */
+/* a:hover{text-decoration:underline;font-size:28px;} */
+.table2a{font-size:24px;text-decoration:none;}
+.table2 a:hover{text-decoration:underline;font-size:28px;}
+.table_div2{width:800px;height:auto;margin:0 auto;}
+.table2{width:100%;height:700px;color:green;font-size:24px; }
+.table2 img{height:400px;}
+.table2 .l{width:200px;text-align:center;}
+.table2 .h{height:500px;}
+.table2 tr{width:200px;}
+.table2 td{background-color:#93FF93;border-radius:5px;margin:10px 10px;}
+.picTd{text-align:center;}
+.user-pList{width:100px;height:110px;}
 </style>
 </head>
 <body>
@@ -30,30 +41,33 @@ a:hover{text-decoration:underline;font-size:28px;}
 <%
 	Book book=(Book)session.getAttribute("book");
 %>
-<table align="center" cellpadding="20" cellspacing="20">
+<div class="table_div2">
+<!-- cellpadding="10" cellspacing="20"  -->
+<table align="center" class="table2" border="2">
+<!-- 	<tr> -->
+<!-- 		<td class="l">번호</td> -->
+<%-- 		<td><%=book.getBookid() %></td> --%>
+<!-- 	</tr> -->
 	<tr>
-		<td>번호</td>
-		<td>도서명</td>
-		<td>가격</td>
-		<td>작자</td>
-		<td>사진</td>
-		<td>출판사</td>
+		<td class="l">도서명</td>
+		<td><%=book.getBookname() %></td>
 	</tr>
 	<tr>
-		<td><%=book.getBookid() %></td>
-		<td><%=book.getBookname() %></td>
-		<td><%=book.getPrice() %></td>
+		<td class="l">작자</td>
 		<td><%=book.getAuthor() %></td>
-		<td><img src="images/<%=book.getPic() %>"></td>
+	</tr>
+	<tr>
+		<td class="l">출판사</td>
 		<td><%=book.getPublish() %></td>
 	</tr>
-	<tr>
-		<td colspan="3"></td>
-		<!-- <td><a href="doCard.jsp">장바구니에 추가</a></td> -->
-		<td><a href="admin.jsp">도서 목록</a></td>
-		<td colspan="2"></td>
+	<tr class="h">
+		<td class="l">사진</td>
+		<td class="picTd">
+		<img src="<%=book.getPic() %>">
+		</td>
 	</tr>
 </table>
+</div>
 
 </body>
 </html>

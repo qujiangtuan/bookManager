@@ -234,8 +234,10 @@ select::-ms-expand { display: none; }
 .about2{
 	margin:0 auto;
 	min-width:1000px;
+	min-height:500px;
 	max-width:1000px;
 	width:100%;
+	margin-top:10px;
 /* 	height:600px; */
 /* 	clear:left; */
 }
@@ -248,6 +250,7 @@ select::-ms-expand { display: none; }
 	width:100%;
 	min-width: 1000px;
 	max-width:1000px;
+	min-height:500px;
 /* 	height:500px; */
 /* 	border-collapse: collapse; */
 /* 	clear:left; */
@@ -332,7 +335,7 @@ select::-ms-expand { display: none; }
 .book_title h3{
 	font-size:20px;
 }
-#shoucang{
+.c1,.c2{
 	width:30px;
 	height:30px;
 	position:relative;

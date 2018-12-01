@@ -37,9 +37,9 @@ public class UserDaoImpl implements UserDao{
 				users.setPassword(rs.getString("password"));
 				users.setEmail(rs.getString("email"));
 				users.setPhone(rs.getString("phone"));
-				user.setIsAdmin(rs.getString("isAdmin"));
+				users.setIsAdmin(rs.getString("isAdmin"));
 				
-				return user;
+				return users;
 			}else{
 				return null;
 			}
@@ -54,6 +54,41 @@ public class UserDaoImpl implements UserDao{
 		}
 		return null;
 	}
+	public User login2(User admin){
+		Connection con=null;
+        String sql = "select * from user1 where name=? and password=? ";
+        User adminRst=null;
+        PreparedStatement prst=null;
+       ResultSet rs=null;
+        try {
+        			con=BaseDao.getCon();
+                  //把sql语句传给数据库操作对象
+        			
+                  prst = con.prepareStatement(sql);
+                  prst.setString(1, admin.getName());
+                  prst.setString(2, admin.getPassword());
+                  rs = prst.executeQuery();;
+                  while(rs.next()){
+                            adminRst = new User();
+                            adminRst.setId(rs.getInt("id"));
+                            adminRst.setName(rs.getString("name"));
+                            adminRst.setPassword(rs.getString("password"));
+                            adminRst.setEmail(rs.getString("email"));
+                            adminRst.setPhone(rs.getString("phone"));
+                            adminRst.setIsAdmin(rs.getString("isAdmin"));
+                 }
+        } catch (SQLException e) {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+        }catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally{
+			//关闭资源，避免出现异常
+			BaseDao.close(con,prst, rs);
+		}
+        return adminRst;
+       
+}
 
 	/***
 	 * 插入的方法，即注册
@@ -128,6 +163,28 @@ public class UserDaoImpl implements UserDao{
 		
 		return null;
 	}
-
+   
+	 public boolean updateUser(User user){
+         String sql="update user1 set name=?,email=?,phone=?   where id=?";
+         Connection con=null;
+         try {
+        	    con=BaseDao.getCon();
+                 PreparedStatement prst=con.prepareStatement(sql);
+                 prst.setString(1,user.getName());
+                 prst.setString(2, user.getEmail());
+                 prst.setString(3, user.getPhone());
+                 prst.setInt(4, user.getId());
+                 if(prst.executeUpdate()>0){ 
+                           return true;
+                 }
+       } catch (SQLException e) {
+                 // TODO Auto-generated catch block
+                 e.printStackTrace();
+       }catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+         return false;
+}
 	
 }

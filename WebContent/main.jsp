@@ -82,31 +82,31 @@
 					<div class="title">과학</div>
 					<div class="sub-row">
 						<span class="bold mr10">기술과학 :</span>
-						<a href="">건축학</a>
+						<a href="#" >건축학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="">기계학</a>
+						<a href="#">기계학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="">화학</a>
+						<a href="#">화학</a>
 					</div>
 					<div class="sub-row">
 						<span class="bold mr10">자연과학 :</span>
-						<a href="">수학</a>
+						<a href="#">수학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="">물리학</a>
+						<a href="#">물리학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="">식물학</a>
+						<a href="#">식물학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="">통계학</a>
+						<a href="#">통계학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="">기타</a>
+						<a href="#">기타</a>
 					</div>
 					<div class="sub-row">
 						<span class="bold mr10">사회과학：</span>
-						<a href="">경제학</a>
+						<a href="#">경제학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="">정치학</a>
+						<a href="#">정치학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="">법학</a>
+						<a href="#">법학</a>
 					</div>
 				</div>
 			</div>
@@ -115,19 +115,19 @@
 					<div class="title">예술</div>
 					<div class="sub-row">
                        <span class="bold mr10">음악 :</span>
-                       <a href="">음악악보</a>
+                       <a href="#">음악악보</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">초급악리</a>
+                       <a href="#">초급악리</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">기타</a>
+                       <a href="#">기타</a>
 					</div>
 					<div class="sub-row">
                        <span class="bold mr10">연극:</span>
-                       <a href="">영화잡지</a>
+                       <a href="#">영화잡지</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">서양 예술</a>
+                       <a href="#">서양 예술</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">기타</a>
+                       <a href="#">기타</a>
 					</div>
 					</div>
 			</div>
@@ -136,25 +136,25 @@
 					<div class="title">언어</div>
 					<div class="sub-row">
                        <span class="bold mr10">중국어 :</span>
-                       <a href="">중국어회화</a>
+                       <a href="#">중국어회화</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">HSK기출문제</a>
+                       <a href="#">HSK기출문제</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">기타</a>
+                       <a href="#">기타</a>
 					</div>
 					<div class="sub-row">
                        <span class="bold mr10">영어：</span>
-                       <a href="">영문영법</a>
+                       <a href="#">영문영법</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">단어장</a>
+                       <a href="#">단어장</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">기타</a>
+                       <a href="#">기타</a>
 					</div>
 					<div class="sub-row">
                        <span class="bold mr10">일본어 ：</span>
-                       <a href="">만화</a>
+                       <a href="#">만화</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">문법</a>
+                       <a href="#">문법</a>
                        <span class="ml10 mr10">/</span>
                        <a href="">기타</a>
 				</div>
@@ -165,21 +165,21 @@
 					<div class="title">기타</div>
 					<div class="sub-row">
                        <span class="bold mr10">문확：</span>
-                       <a href="">한국문학</a>
+                       <a href="#">한국문학</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">일본문학</a>
+                       <a href="#">일본문학</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">영미문학</a>
+                       <a href="#">영미문학</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">기타</a>
+                       <a href="#">기타</a>
 					</div>
 					<div class="sub-row">
                        <span class="bold mr10">역사：</span>
-                       <a href="">아시아</a>
+                       <a href="#">아시아</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">유럽</a>
+                       <a href="#">유럽</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="">기타</a>
+                       <a href="#">기타</a>
 					</div>
 				</div>
 			</div>
@@ -199,26 +199,26 @@
 				</a>
 			</div>
 			<div class="menu-item">
-				<a href="">
+				<a href="#">
 					<span>언어</span>
 					<i class="icon">&#xe665;</i>
 				</a>
 			</div>
 			<div class="menu-item">
-				<a href="">
+				<a href="#">
 					<span>기타</span>
 					<i class="icon">&#xe665;</i>
 				</a>
 			</div>
 		</div>
 		<div class="banner" id="banner">
-			<a href="">
+			<a href="#">
 				<div class="banner-slide slide1 slide-active"></div>
 			</a>
-			<a href="">
+			<a href="#">
 				<div class="banner-slide slide2"></div>
 			</a>
-			<a href="">
+			<a href="#">
 				<div class="banner-slide slide3"></div>
 			</a>
 		</div>
@@ -242,31 +242,107 @@
 		if(getbook==null){
 			getbook=new Book();
 		}
-		System.out.println("getbook="+getbook);
+// 		System.out.println("getbook="+getbook);
 		List<Book> list=dao.getBookList(getbook);
 		int sum=list.size();
-		System.out.println(list);
+// 		System.out.println(list);
 	%>
 	<!-- ABOUT2区 -->
 			<div class="about2">
 				<table class="table" cellspacing="10">
-				<% for(int i=0;i<sum;i++){ %>
-					<%if(i%4==1){ %>
-						<tr>
-					<%} %>
-							<td class="background1">
-<%-- 								<img src="${list.get(i).getPic()}"> --%>
-								<img src="<%=list.get(i).getPic()%>">
-								<div class="c1  <%=i %>"  id="shoucang" onclick="changPic(<%=sum%>,<%=i%>)"></div>
-								<div class="book_title"><h3><%=list.get(i).getBookname() %></h3></div>
-						 	 </td>
-					<%if(i%4==0){ %>
-						</tr>
+				<!-- m=1 -->
+				<%if(sum==1){ %>
+					<tr>
+						<td class="background1">
+									<a href="detail.jsp?id=${list.get(0).getId() }"><img src="<%=list.get(0).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(0).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(0).getBookid() %>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(0).getBookname() %></h3></div>
+						</td>
+						<td></td><td></td><td></td>
+					</tr>
+				<%} %>
+				<!-- m=1 -->
+				<%if(sum==2){ %>
+					<tr>
+						<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(0).getBookid()%>"><img src="<%=list.get(0).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(0).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(0).getBookid() %>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(0).getBookname() %></h3></div>
+						</td>
+						<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(1).getBookid()%>"><img src="<%=list.get(1).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(1).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(1).getBookid() %>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(1).getBookname() %></h3></div>
+						</td>
+						<td></td><td></td>
+					</tr>
+				<%} %>
+				<!--m=1 -->
+				<%if(sum==3){ %>
+					<tr>
+						<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(0).getBookid()%>"><img src="<%=list.get(0).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(0).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(0).getBookid() %>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(0).getBookname() %></h3></div>
+						</td>
+						<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(1).getBookid()%>"><img src="<%=list.get(1).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(1).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(1).getBookid() %>%>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(1).getBookname() %></h3></div>
+						</td>
+						<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(2).getBookid()%>"><img src="<%=list.get(2).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(2).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(2).getBookid() %>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(2).getBookname() %></h3></div>
+						</td>
+						<td></td>
+					</tr>
+				<%} %>
+				<!--m=1 -->
+				<%if(sum==4){ %>
+					<tr>
+						<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(0).getBookid()%>"><img src="<%=list.get(0).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(0).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(0).getBookid() %>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(0).getBookname() %></h3></div>
+						</td>
+						<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(1).getBookid()%>"><img src="<%=list.get(1).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(1).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(1).getBookid() %>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(1).getBookname() %></h3></div>
+						</td>
+						<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(2).getBookid()%>"><img src="<%=list.get(2).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(2).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(2).getBookid() %>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(2).getBookname() %></h3></div>
+						</td>
+						<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(3).getBookid()%>"><img src="<%=list.get(3).getPic()%>"></a>
+<%-- 									<div class="c1 "  id="shoucang<%=list.get(3).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(3).getBookid() %>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(3).getBookname() %></h3></div>
+						</td>
+					</tr>
+				<%} %>
+				<%if(sum>4){ %>
+					<% for(int i=0;i<sum;i++){ %>
+						<%if((i+1)%4==1){ %>
+							<tr>
+						<%} %>
+								<td class="background1">
+									<a href="doInfo.jsp?bookid=<%=list.get(i).getBookid()%>"><img src="<%=list.get(i).getPic()%>"></a>
+<%-- 									<div class="c1"  id="shoucang<%=list.get(i).getBookid() %>" onclick="changPic(<%=sum%>,<%=list.get(i).getBookid()%>)"></div> --%>
+									<div class="book_title"><h3><%=list.get(i).getBookname() %></h3></div>
+							 	 </td>
+						<%if((i+1)%4==0){ %>
+							</tr>
+						<%} %>
+						
+<%-- 						<%if(sum<4){ %> --%>
+<!-- 						</tr> -->
+<%-- 						<%} %> --%>
 					<%} %>
 				<%} %>
-				<%if(sum<4){ %>
-				</tr>
-				<%} %>
+
 		</table>
 			</div>
 	<div class="footer">
@@ -274,40 +350,18 @@
 	</div>
 		
 	</div>
-	<script type="text/javascript">
-		function changPic(sum,i){
-			var start=document.getElementById("shoucang");
-// 			document.write(start.className);
-// 			document.write("<br>");
-// 			document.write("sum="+sum);
-// 			document.write("<br>");
-// 			document.write("i="+i);
-// 			document.write("<br>");
-// 			start.addEventListener("click",function(){
-	
-// 			for(i=1;i<sum;i++){
-// 				document.write("c1 "+i);
-				var k="c1 "+i;
-// 				document.write(k);
-				if(start.className=="c1 "+i){
-					start.className="c2 "+i;
-				}else{
-					start.className="c1 "+i;
-				}
-// 			}
-			
-		
-// 				if(start.className=="c1 "){
-// 					start.className="c2 ";
+<!-- 	<script type="text/javascript"> -->
+// 		function changPic(sum,id){
+// 			var start=document.getElementById("shoucang"+id);
+// 				if(start.className=="c1"){
+// 					start.className="c2";
+// 					window.location.href="doInfo5.jsp?bookid="+id;
 // 				}else{
-// 					start.className="c1 "i;
+// 					start.className="c1";
 // 				}
-			
-				
-// 			});
-		}
-		changPic();
-	</script>
+// 		}
+// 		changPic();
+<!-- 	</script> -->
 	<script src="js/lunboscript.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>></script>
