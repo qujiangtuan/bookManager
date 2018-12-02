@@ -97,7 +97,7 @@
 		</tr>
 		<tr >
 			<td class="l">가격:</td>
-			<td class="r"><input type="text" name="price"/></td>
+			<td class="r"><input type="text" name="price" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="please enter the number!"/></td>
 		</tr>
 		<tr >
 			<td class="l">작가:</td>

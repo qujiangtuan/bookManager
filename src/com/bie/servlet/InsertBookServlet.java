@@ -61,7 +61,7 @@ public class InsertBookServlet extends HttpServlet {
 		
 		//콘솔 /브라우저에 실제 경로를 출력
 //		System.out.println("서버상의 실제 디렉토리 : ");
-		System.out.println(realFolder);
+//		System.out.println(realFolder);
 //		
 		//파일을 받아와서 폴더에 업로드 하면 된다
 		MultipartRequest multi=null;

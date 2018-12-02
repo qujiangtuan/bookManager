@@ -108,7 +108,6 @@ h2{margin:0 auto;color:white;font-size:26px;}
 // 	List<Book> list=dao.bookPage(p, r);
     List<Book> list=dao.getCollectBookList(book);
 	request.setAttribute("list",list);
-	System.out.println("collectList====="+list);
 	
 // 	request.setAttribute("book", book);
 %>

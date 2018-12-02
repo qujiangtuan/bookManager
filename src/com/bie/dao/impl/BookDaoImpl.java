@@ -261,7 +261,7 @@ public class BookDaoImpl implements BookDao{
 	
 	@Override
 	public boolean deleteCollectBook(Integer id,Integer userid) {
-		System.out.println("id="+id+",userid="+userid);
+//		System.out.println("id="+id+",userid="+userid);
 		String sql="delete from cbook where bookid="+id+" and userid="+userid;
 		Connection con = null;
         try {

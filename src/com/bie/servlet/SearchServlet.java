@@ -23,11 +23,7 @@ public class SearchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
-//		String type2 =null;
-//		type2 = request.getParameter("type");
-//		System.out.println("type2="+type2);
-//		
-		
+
 		String search_input=null;
 		String select="도서명";
 		String bookName=null,author=null,type=null,publish=null;

@@ -95,31 +95,31 @@
 					<div class="title">과학</div>
 					<div class="sub-row">
 						<span class="bold mr10">기술과학 :</span>
-						<a href="#">건축학</a>
+						<a href="SearchServlet2?type=a" >건축학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="#">기계학</a>
+						<a href="SearchServlet2?type=b">기계학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="#">화학</a>
+						<a href="SearchServlet2?type=c">화학</a>
 					</div>
 					<div class="sub-row">
 						<span class="bold mr10">자연과학 :</span>
-						<a href="#">수학</a>
+						<a href="SearchServlet2?type=d">수학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="#">물리학</a>
+						<a href="SearchServlet2?type=e">물리학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="#">식물학</a>
+						<a href="SearchServlet2?type=f">식물학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="#">통계학</a>
+						<a href="SearchServlet2?type=g">통계학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="#">기타</a>
+						<a href="SearchServlet2?type=ta">기타</a>
 					</div>
 					<div class="sub-row">
 						<span class="bold mr10">사회과학：</span>
-						<a href="#">경제학</a>
+						<a href="SearchServlet2?type=h">경제학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="#">정치학</a>
+						<a href="SearchServlet2?type=i">정치학</a>
 						<span class="ml10 mr10">/</span>
-						<a href="#">법학</a>
+						<a href="SearchServlet2?type=n">법학</a>
 					</div>
 				</div>
 			</div>
@@ -128,19 +128,19 @@
 					<div class="title">예술</div>
 					<div class="sub-row">
                        <span class="bold mr10">음악 :</span>
-                       <a href="#">음악악보</a>
+                       <a href="SearchServlet2?type=j">음악악보</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">초급악리</a>
+                       <a href="SearchServlet2?type=k">초급악리</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">기타</a>
+                       <a href="SearchServlet2?type=ta">기타</a>
 					</div>
 					<div class="sub-row">
                        <span class="bold mr10">연극:</span>
-                       <a href="#">영화잡지</a>
+                       <a href="SearchServlet2?type=l">영화잡지</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">서양 예술</a>
+                       <a href="SearchServlet2?type=m">서양예술</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">기타</a>
+                       <a href="SearchServlet2?type=ta">기타</a>
 					</div>
 					</div>
 			</div>
@@ -149,27 +149,27 @@
 					<div class="title">언어</div>
 					<div class="sub-row">
                        <span class="bold mr10">중국어 :</span>
-                       <a href="#">중국어회화</a>
+                       <a href="SearchServlet2?type=o">중국어회화</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">HSK기출문제</a>
+                       <a href="SearchServlet2?type=p">HSK기출문제</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">기타</a>
+                       <a href="SearchServlet2?type=ta">기타</a>
 					</div>
 					<div class="sub-row">
                        <span class="bold mr10">영어：</span>
-                       <a href="#">영문영법</a>
+                       <a href="SearchServlet2?type=q">영문영법</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">단어장</a>
+                       <a href="SearchServlet2?type=r">단어장</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">기타</a>
+                       <a href="SearchServlet2?type=ta">기타</a>
 					</div>
 					<div class="sub-row">
                        <span class="bold mr10">일본어 ：</span>
-                       <a href="#">만화</a>
+                       <a href="SearchServlet2?type=s">만화</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">문법</a>
+                       <a href="SearchServlet2?type=t">문법</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">기타</a>
+                       <a href="SearchServlet2?type=ta">기타</a>
 				</div>
 				</div>
 			</div>
@@ -178,21 +178,21 @@
 					<div class="title">기타</div>
 					<div class="sub-row">
                        <span class="bold mr10">문확：</span>
-                       <a href="#">한국문학</a>
+                       <a href="SearchServlet2?type=u"">한국문학</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">일본문학</a>
+                       <a href="SearchServlet2?type=v">일본문학</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">영미문학</a>
+                       <a href="SearchServlet2?type=w">영미문학</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">기타</a>
+                       <a href="SearchServlet2?type=ta">기타</a>
 					</div>
 					<div class="sub-row">
                        <span class="bold mr10">역사：</span>
-                       <a href="#">아시아</a>
+                       <a href="SearchServlet2?type=x">아시아</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">유럽</a>
+                       <a href="SearchServlet2?type=y">유럽</a>
                        <span class="ml10 mr10">/</span>
-                       <a href="#">기타</a>
+                       <a href="SearchServlet2?type=ta">기타</a>
 					</div>
 				</div>
 			</div>
@@ -200,25 +200,25 @@
 		<!-- 菜单 -->
 		<div class="menu-content" id="menu-content">
 			<div class="menu-item">
-				<a href="#">
+				<a href="SearchServlet2?type=aa">
 					<span>과학</span>
 					<i class="icon">&#xe665;</i>
 				</a>
 			</div>
 			<div class="menu-item">
-				<a href="#">
+				<a href="SearchServlet2?type=bb">
 					<span>예술</span>
 					<i class="icon">&#xe665;</i>
 				</a>
 			</div>
 			<div class="menu-item">
-				<a href="#">
+				<a href="SearchServlet2?type=cc">
 					<span>언어</span>
 					<i class="icon">&#xe665;</i>
 				</a>
 			</div>
 			<div class="menu-item">
-				<a href="#">
+				<a href="SearchServlet2?type=ta">
 					<span>기타</span>
 					<i class="icon">&#xe665;</i>
 				</a>
@@ -255,10 +255,8 @@
 		if(getbook==null){
 			getbook=new Book();
 		}
-		System.out.println("getbook="+getbook);
 		List<Book> list=dao.getBookList(getbook);
 		int sum=list.size();
-		System.out.println(list);
 	%>
 	<!-- ABOUT2区 -->
 			<div class="about2">
