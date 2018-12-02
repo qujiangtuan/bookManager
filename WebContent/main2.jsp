@@ -40,7 +40,7 @@
             <div class="logo"><a href="main2.jsp"><img src="img/Books-Store-Logo2.jpg" alt=""></a></div>
             <div class="title">
                 <div class="search">
-                <form action="SearchServlet" method="get">
+                <form action="SearchServlet3" method="get">
                     <select class="select" name="select">
                          <option value ="도서명">도서명 </option>
                           <option value ="종류">종류</option>
